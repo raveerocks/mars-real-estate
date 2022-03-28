@@ -8,7 +8,7 @@
 
     <fragment
         android:id="@+id/overviewFragment"
-        android:name="io.raveerocks.marsrealestate.overview.OverviewFragment"
+        android:name="io.raveerocks.marsrealestate.ui.overview.OverviewFragment"
         android:label="fragment_overview"
         tools:layout="@layout/fragment_overview">
         <action
@@ -18,12 +18,12 @@
 
     <fragment
         android:id="@+id/detailFragment"
-        android:name="io.raveerocks.marsrealestate.detail.DetailFragment"
+        android:name="io.raveerocks.marsrealestate.ui.detail.DetailFragment"
         android:label="fragment_detail"
         tools:layout="@layout/fragment_detail">
         <argument
             android:name="selectedProperty"
-            app:argType="io.raveerocks.marsrealestate.network.MarsProperty" />
+            app:argType="io.raveerocks.marsrealestate.entity.MarsProperty" />
     </fragment>
 
 </navigation>

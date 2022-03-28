@@ -8,7 +8,7 @@
 
         <variable
             name="property"
-            type="io.raveerocks.marsrealestate.network.MarsProperty" />
+            type="io.raveerocks.marsrealestate.entity.MarsProperty" />
     </data>
 
     <ImageView

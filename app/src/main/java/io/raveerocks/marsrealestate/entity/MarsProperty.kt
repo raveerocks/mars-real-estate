@@ -1,4 +1,4 @@
-package io.raveerocks.marsrealestate.network
+package io.raveerocks.marsrealestate.entity
 
 import android.os.Parcelable
 import com.squareup.moshi.Json

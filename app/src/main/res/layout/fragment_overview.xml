@@ -9,7 +9,7 @@
 
         <variable
             name="viewModel"
-            type="io.raveerocks.marsrealestate.overview.OverviewViewModel" />
+            type="io.raveerocks.marsrealestate.view.overview.OverviewViewModel" />
     </data>
 
     <androidx.constraintlayout.widget.ConstraintLayout

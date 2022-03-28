@@ -1,4 +1,4 @@
-package io.raveerocks.marsrealestate.detail
+package io.raveerocks.marsrealestate.view.detail
 
 import android.app.Application
 import androidx.lifecycle.AndroidViewModel
@@ -6,7 +6,7 @@ import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.Transformations
 import io.raveerocks.marsrealestate.R
-import io.raveerocks.marsrealestate.network.MarsProperty
+import io.raveerocks.marsrealestate.entity.MarsProperty
 
 
 class DetailViewModel(marsProperty: MarsProperty, app: Application) : AndroidViewModel(app) {

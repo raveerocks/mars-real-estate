@@ -1,4 +1,4 @@
-package io.raveerocks.marsrealestate
+package io.raveerocks.marsrealestate.adapter
 
 import android.view.View
 import android.widget.ImageView
@@ -7,9 +7,9 @@ import androidx.databinding.BindingAdapter
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
 import com.bumptech.glide.request.RequestOptions
-import io.raveerocks.marsrealestate.network.MarsProperty
-import io.raveerocks.marsrealestate.overview.MarsApiStatus
-import io.raveerocks.marsrealestate.overview.PhotoGridAdapter
+import io.raveerocks.marsrealestate.R
+import io.raveerocks.marsrealestate.entity.MarsProperty
+import io.raveerocks.marsrealestate.view.overview.MarsApiStatus
 
 
 @BindingAdapter("listData")

@@ -14,12 +14,12 @@
  *  limitations under the License.
  */
 
-package io.raveerocks.marsrealestate.detail
+package io.raveerocks.marsrealestate.view.detail
 
 import android.app.Application
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.ViewModelProvider
-import io.raveerocks.marsrealestate.network.MarsProperty
+import io.raveerocks.marsrealestate.entity.MarsProperty
 
 class DetailViewModelFactory(
     private val marsProperty: MarsProperty,

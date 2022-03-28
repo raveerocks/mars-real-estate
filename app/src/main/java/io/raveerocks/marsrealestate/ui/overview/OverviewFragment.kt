@@ -1,4 +1,4 @@
-package io.raveerocks.marsrealestate.overview
+package io.raveerocks.marsrealestate.ui.overview
 
 import android.os.Bundle
 import android.view.*
@@ -7,7 +7,9 @@ import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.fragment.findNavController
 import io.raveerocks.marsrealestate.R
 import io.raveerocks.marsrealestate.databinding.FragmentOverviewBinding
-import io.raveerocks.marsrealestate.network.MarsApiFilter
+import io.raveerocks.marsrealestate.service.MarsApiFilter
+import io.raveerocks.marsrealestate.view.overview.OverviewViewModel
+import io.raveerocks.marsrealestate.adapter.PhotoGridAdapter
 
 
 class OverviewFragment : Fragment() {
@@ -28,14 +30,17 @@ class OverviewFragment : Fragment() {
             PhotoGridAdapter(PhotoGridAdapter.OnClickListener { viewModel.displayPropertyDetails(it) })
         viewModel.navigateToSelectedProperty.observe(viewLifecycleOwner) {
             if (it != null) {
-                this.findNavController().navigate(OverviewFragmentDirections.actionShowDetail(it))
+                this.findNavController().navigate(
+                    OverviewFragmentDirections.actionShowDetail(
+                        it
+                    )
+                )
                 viewModel.displayPropertyDetailsComplete()
             }
         }
         setHasOptionsMenu(true)
         return binding.root
     }
-
 
     override fun onCreateOptionsMenu(menu: Menu, inflater: MenuInflater) {
         inflater.inflate(R.menu.overflow_menu, menu)

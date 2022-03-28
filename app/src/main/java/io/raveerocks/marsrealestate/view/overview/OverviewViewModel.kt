@@ -1,12 +1,12 @@
-package io.raveerocks.marsrealestate.overview
+package io.raveerocks.marsrealestate.view.overview
 
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
-import io.raveerocks.marsrealestate.network.MarsApi
-import io.raveerocks.marsrealestate.network.MarsApiFilter
-import io.raveerocks.marsrealestate.network.MarsProperty
+import io.raveerocks.marsrealestate.service.MarsApi
+import io.raveerocks.marsrealestate.service.MarsApiFilter
+import io.raveerocks.marsrealestate.entity.MarsProperty
 import kotlinx.coroutines.launch
 
 enum class MarsApiStatus { LOADING, ERROR, DONE }

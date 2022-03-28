@@ -1,4 +1,4 @@
-package io.raveerocks.marsrealestate.overview
+package io.raveerocks.marsrealestate.adapter
 
 import android.view.LayoutInflater
 import android.view.ViewGroup
@@ -6,7 +6,7 @@ import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.ListAdapter
 import androidx.recyclerview.widget.RecyclerView
 import io.raveerocks.marsrealestate.databinding.GridViewItemBinding
-import io.raveerocks.marsrealestate.network.MarsProperty
+import io.raveerocks.marsrealestate.entity.MarsProperty
 
 
 class PhotoGridAdapter(private val onClickListener: OnClickListener) :
