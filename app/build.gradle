@@ -9,8 +9,8 @@ plugins {
 android {
     compileSdk 31
 
-    buildFeatures{
-        dataBinding=true
+    buildFeatures {
+        dataBinding = true
     }
 
     defaultConfig {
@@ -41,22 +41,18 @@ android {
 }
 
 dependencies {
-
-    //kapt "androidx.room:room-compiler:$version_room"
     implementation "androidx.core:core-ktx:$version_core"
     implementation "androidx.appcompat:appcompat:$version_appcompat"
     implementation "com.google.android.material:material:$version_material"
     implementation "androidx.constraintlayout:constraintlayout:$version_constraintlayout"
-    //implementation "androidx.room:room-runtime:$version_room"
     implementation "androidx.navigation:navigation-ui-ktx:$version_navigation"
     implementation "androidx.navigation:navigation-fragment-ktx:$version_navigation"
+    implementation "com.github.bumptech.glide:glide:$version_glide"
+    implementation "com.squareup.retrofit2:converter-moshi:$version_retrofit"
+    implementation "com.squareup.moshi:moshi:$version_moshi"
+    implementation "com.squareup.moshi:moshi-kotlin:$version_moshi"
+    implementation "androidx.multidex:multidex:$version_multidex"
     testImplementation "junit:junit:$version_junit"
     androidTestImplementation "androidx.test.ext:junit:$version_android_junit"
     androidTestImplementation "androidx.test.espresso:espresso-core:$version_espresso_core"
-
-    implementation "com.squareup.moshi:moshi:$version_moshi"
-    implementation "com.squareup.moshi:moshi-kotlin:$version_moshi"
-    implementation "com.squareup.retrofit2:converter-moshi:$version_retrofit"
-    implementation "com.github.bumptech.glide:glide:$version_glide"
-    implementation "androidx.multidex:multidex:$version_multidex"
 }

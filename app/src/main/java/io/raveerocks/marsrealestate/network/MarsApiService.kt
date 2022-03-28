@@ -21,7 +21,7 @@ private val retrofit = Retrofit.Builder()
     .build()
 
 object MarsApi {
-    val retrofitService : MarsApiService by lazy {
+    val retrofitService: MarsApiService by lazy {
         retrofit.create(MarsApiService::class.java)
     }
 }

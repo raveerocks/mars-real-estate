@@ -9,16 +9,18 @@ import io.raveerocks.marsrealestate.databinding.GridViewItemBinding
 import io.raveerocks.marsrealestate.network.MarsProperty
 
 
-class PhotoGridAdapter(val onClickListener: OnClickListener) : ListAdapter<MarsProperty, PhotoGridAdapter.MarsPropertyViewHolder>(DiffCallback) {
+class PhotoGridAdapter(private val onClickListener: OnClickListener) :
+    ListAdapter<MarsProperty, PhotoGridAdapter.MarsPropertyViewHolder>(DiffCallback) {
 
-    class MarsPropertyViewHolder(private var binding: GridViewItemBinding) :RecyclerView.ViewHolder(binding.root){
-        fun bind(property: MarsProperty){
+    class MarsPropertyViewHolder(private var binding: GridViewItemBinding) :
+        RecyclerView.ViewHolder(binding.root) {
+        fun bind(property: MarsProperty) {
             binding.property = property
             binding.executePendingBindings()
         }
     }
 
-    companion object DiffCallback: DiffUtil.ItemCallback<MarsProperty>() {
+    companion object DiffCallback : DiffUtil.ItemCallback<MarsProperty>() {
 
         override fun areItemsTheSame(oldItem: MarsProperty, newItem: MarsProperty): Boolean {
             return oldItem === newItem
@@ -46,7 +48,7 @@ class PhotoGridAdapter(val onClickListener: OnClickListener) : ListAdapter<MarsP
     }
 
     class OnClickListener(val clickListener: (marsProperty: MarsProperty) -> Unit) {
-        fun onClick(marsProperty:MarsProperty) = clickListener(marsProperty)
+        fun onClick(marsProperty: MarsProperty) = clickListener(marsProperty)
     }
 }
 

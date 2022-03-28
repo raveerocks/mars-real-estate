@@ -16,14 +16,14 @@ class OverviewViewModel : ViewModel() {
     private val _status = MutableLiveData<MarsApiStatus>()
     private val _properties = MutableLiveData<List<MarsProperty>>()
 
-    private val _navigateToSelectedProperty = MutableLiveData<MarsProperty>()
+    private val _navigateToSelectedProperty = MutableLiveData<MarsProperty?>()
 
     val status: LiveData<MarsApiStatus>
         get() = _status
     val properties: LiveData<List<MarsProperty>>
         get() = _properties
 
-    val navigateToSelectedProperty: LiveData<MarsProperty>
+    val navigateToSelectedProperty: LiveData<MarsProperty?>
         get() = _navigateToSelectedProperty
 
     init {
@@ -34,7 +34,7 @@ class OverviewViewModel : ViewModel() {
         viewModelScope.launch {
             try {
                 _status.value = MarsApiStatus.LOADING
-                _properties.value= MarsApi.retrofitService.getPropertiesAsync(filter.value)
+                _properties.value = MarsApi.retrofitService.getPropertiesAsync(filter.value)
                 _status.value = MarsApiStatus.DONE
             } catch (e: Exception) {
                 _status.value = MarsApiStatus.ERROR
